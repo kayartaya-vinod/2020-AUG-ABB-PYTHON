@@ -1,9 +1,3 @@
-# Python basics training
-
-Client: ABB<br>
-Duration: 3 days, 5 hours each day<br>
-From: 24th August 2020<br>
-Mode: Online/ Microsoft Teams<br>
 
 <pre>
  _      _____   ___  ______  _   _      _    _  _____  _____  _   _      _   _  _____  _   _  _____ ______ 
@@ -22,7 +16,14 @@ vinod@vinod.co
 </pre>
 
 
+# Online course (56 lectures - 7 hr 10 mins): 
 
 <a href="https://courses.vinod.co/python-3-programming-masterclass-beginner-to-advanced">Python 3 Programming MasterClass - Beginner to Advanced</a>
 
-<br>56 lectures - 7 hr 10 mins
+
+# Python basics training
+
+Client: ABB<br>
+Duration: 3 days, 5 hours each day<br>
+From: 24th August 2020<br>
+Mode: Online/ Microsoft Teams<br>
