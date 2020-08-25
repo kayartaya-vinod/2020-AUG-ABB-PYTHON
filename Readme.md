@@ -15,7 +15,7 @@ vinod@vinod.co
 +91 973 142 4784
 </pre>
 
-<h1><a href="https://courses.vinod.co/python-3-programming-masterclass-beginner-to-advanced">
+<h1><a href="https://courses.vinod.co/python-3-programming-masterclass-beginner-to-advanced/buy">
 Click here for online course (56 videos - 7 hr 10 mins)</a></h1>
 
 
