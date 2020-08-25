@@ -15,12 +15,13 @@ vinod@vinod.co
 +91 973 142 4784
 </pre>
 
-<h1><a href="https://courses.vinod.co/python-3-programming-masterclass-beginner-to-advanced">Online course (56 lectures - 7 hr 10 mins)</a></h1>
+<h1><a href="https://courses.vinod.co/python-3-programming-masterclass-beginner-to-advanced">
+Click here to view online course (56 lectures - 7 hr 10 mins)</a></h1>
 
 
-# Python basics training
-
+<!-- 
 Client: ABB<br>
 Duration: 3 days, 5 hours each day<br>
 From: 24th August 2020<br>
-Mode: Online/ Microsoft Teams<br>
+Mode: Online/ Microsoft Teams<br> 
+-->
