@@ -15,10 +15,7 @@ vinod@vinod.co
 +91 973 142 4784
 </pre>
 
-
-# Online course (56 lectures - 7 hr 10 mins): 
-
-<a href="https://courses.vinod.co/python-3-programming-masterclass-beginner-to-advanced">Python 3 Programming MasterClass - Beginner to Advanced</a>
+<h1><a href="https://courses.vinod.co/python-3-programming-masterclass-beginner-to-advanced">Online course (56 lectures - 7 hr 10 mins)</a></h1>
 
 
 # Python basics training
