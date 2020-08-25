@@ -16,7 +16,7 @@ vinod@vinod.co
 </pre>
 
 <h1><a href="https://courses.vinod.co/python-3-programming-masterclass-beginner-to-advanced">
-Click here to view online course (56 lectures - 7 hr 10 mins)</a></h1>
+Click here for online course (56 videos - 7 hr 10 mins)</a></h1>
 
 
 <!-- 
