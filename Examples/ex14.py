@@ -3,9 +3,35 @@ class Product:
     def __init__(self, **kwargs):
         # print('type of kwargs is', type(kwargs))
         # print('kwargs contain', kwargs)
-        self.__id = kwargs.get('id')
-        self.__name = kwargs.get('name')
-        self.__price = kwargs.get('price', 0.0)  # internally, __price is save as _Product__price
+        self.id = kwargs.get('id', 0)  # invokes the setter for id
+        self.name = kwargs.get('name', '')
+        self.price = kwargs.get('price', 0.0)  # internally, __price is save as _Product__price
+
+    @property
+    def id(self):
+        return self.__id
+
+    @id.setter
+    def id(self, value):
+        if type(value) != int:
+            raise TypeError('id must be a integer')
+        if value < 0:
+            raise ValueError('id must be >= 0')
+        self.__id = value
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, value):
+        if type(value) != str:
+            raise TypeError('name must be a str')
+        value = value.strip()  # remove leading/trailing white spaces
+        ln = len(value)
+        if ln > 25:
+            raise ValueError('length of name must less than 25 letters')
+        self.__name = value
 
     # getter property ( readonly variable)
     @property
@@ -19,14 +45,13 @@ class Product:
             raise TypeError('price must be a number')
         if value < 0.0:
             raise ValueError('price must be >= 0.0')
-
         self.__price = value
 
     def display(self):
         # self is same as the invoking object (i.e, p1 or p2 from main)
         print('ID       :', self.__id)
         print('Name     :', self.__name)
-        print('Price    : ₹', self.__price)   # self.__price --> self._Product__price
+        print('Price    : ₹', self.__price)  # self.__price --> self._Product__price
         print()
 
     def __str__(self):
@@ -40,7 +65,7 @@ class Product:
 def main():
     p1 = Product()
     p2 = Product(id=1, name='Cabbage', price=15.5)
-    p3 = Product(name='Potato Organically Grown')
+    p3 = Product(name='Potato Organically Grown', price=52.5)
     p4 = Product(id=5, price=12.3)
 
     # p1.display()
@@ -64,6 +89,8 @@ def main():
     # p2.setPrice(45.6)  # typically, this is what you do in C++ or Java
     p2.price = 22.3  # --> invoke a setter property (which is nothing but a function)
     p2.display()
+
+    p3.display()
 
 
 if __name__ == '__main__':
