@@ -29,8 +29,8 @@ class Product:
             raise TypeError('name must be a str')
         value = value.strip()  # remove leading/trailing white spaces
         ln = len(value)
-        if ln > 25:
-            raise ValueError('length of name must less than 25 letters')
+        if ln > 50:
+            raise ValueError('length of name must less than 50 letters')
         self.__name = value
 
     # getter property ( readonly variable)
@@ -54,6 +54,25 @@ class Product:
         print('Price    : ₹', self.__price)  # self.__price --> self._Product__price
         print()
 
+    # p1 += value
+    def __iadd__(self, value):
+        if type(value) in (int, float):
+            self.price += value
+        elif type(value) == str:
+            self.name += value
+        else:
+            raise TypeError('Invalid type for += operation; expecting int, float or str, got {}'.format(type(value)))
+
+        return self  # required for __iXXX__ operators (iXXX -> iadd, isub, imul, idiv, imod)
+
+    def __gt__(self, value):
+        if type(value) in (int, float):
+            return self.price > value
+        elif type(value) == Product:
+            return self.price > value.price
+        else:
+            raise TypeError('Operator > cannot be used with Product and {}'.format(type(value)))
+
     def __str__(self):
         """
         Textually represents 'self'. Equivalent to toString() in Java/C#/JavaScript
@@ -68,10 +87,10 @@ def main():
     p3 = Product(name='Potato Organically Grown', price=52.5)
     p4 = Product(id=5, price=12.3)
 
-    # p1.display()
-    # p2.display()
-    # p3.display()
-    # p4.display()
+    p1.display()
+    p2.display()
+    p3.display()
+    p4.display()
 
     print(p1)  # --> print(p1.__str__())
     print(p2)
