@@ -1,7 +1,6 @@
 """
 Script to accept two numbers and print prime numbers between the same
 """
-import vinutils
 
 
 def is_prime(num):

@@ -1,3 +1,15 @@
+class InvalidIdException(Exception):
+    pass
+
+
+class InvalidNameException(Exception):
+    pass
+
+
+class InvalidPriceException(Exception):
+    pass
+
+
 class Product:
 
     def __init__(self, **kwargs):
@@ -14,9 +26,9 @@ class Product:
     @id.setter
     def id(self, value):
         if type(value) != int:
-            raise TypeError('id must be a integer')
+            raise InvalidIdException('id must be a integer')
         if value < 0:
-            raise ValueError('id must be >= 0')
+            raise InvalidIdException('id must be >= 0')
         self.__id = value
 
     @property
@@ -26,11 +38,11 @@ class Product:
     @name.setter
     def name(self, value):
         if type(value) != str:
-            raise TypeError('name must be a str')
+            raise InvalidNameException('name must be a str')
         value = value.strip()  # remove leading/trailing white spaces
         ln = len(value)
         if ln > 50:
-            raise ValueError('length of name must less than 50 letters')
+            raise InvalidNameException('length of name must less than 50 letters')
         self.__name = value
 
     # getter property ( readonly variable)
@@ -42,9 +54,9 @@ class Product:
     @price.setter
     def price(self, value):
         if type(value) not in (int, float):
-            raise TypeError('price must be a number')
+            raise InvalidPriceException('price must be a number')
         if value < 0.0:
-            raise ValueError('price must be >= 0.0')
+            raise InvalidPriceException('price must be >= 0.0')
         self.__price = value
 
     def display(self):
